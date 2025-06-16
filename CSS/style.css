@@ -1,0 +1,604 @@
+* {
+    font-family: 'Poppins', sans-serif; /*Hier habe ich meine Schriftart festgestelegt*/
+    margin: 0; /*Hier habe ich es so eingestellt, dass das Margin standardmässig auf 0 bleibt, wenn nicht gegeben*/
+    padding: 0; /*Hier habe ich es so eingestellt, dass das Padding standardmässig auf 0 bleibt, wenn nicht gegeben*/
+}
+
+html {
+    height: 100%; /*Der HTML-Code soll sich über den Ganzen Bildschirm ausbreiten*/
+}
+
+body {
+    height: 100%; /*Der Body soll zu 100% hoch sein*/
+    background: #f2f2f2; /*Das ist meine Hintergrundfarbe, sie ist nicht vollständig weiss, sondern geht ein bisschen ins graue hinein*/
+}
+
+/* Ab hier von YouTube und etwas W3C */
+
+nav {
+    height: 80px; /*Die Navigation soll 80px hoch sein*/
+    background: #ffffff; /*Navigation soll vollständig Weiss sein*/
+    display: flex; /*Definiert nav als Flex-Container; für korrekte Positionierung*/
+    justify-content: space-between; /*Werden gleichmässig positioniert*/
+    align-items: center; /*Vertikale Ausrichtung -> Elemente werden zentriert*/
+    position: fixed; /*Soll an Ort und Stelle blieben, während dem Scrollen. Also oben fixiert.*/
+    width: 100%; /*Soll die Breite des ganzen Bildschirms einnehmen*/
+    z-index: 1; /*Navigation soll in den Vordergrund*/
+}
+
+.logo {
+    width: 85px; /*Das Logo soll 85px breit sein*/
+    margin-left: 30px; /*Das Logo hat einen Abstand zum linken Rand von 30px*/
+}
+
+nav ul {
+    height: 100%; /*Die ungeordnete Liste soll in der Navigation eine vollständige Höhe von 80px (height - nav) haben*/
+    display: flex; /*Definiert die ungeordnete Liste als Flex-Container für die korrekte positionierung*/
+    flex-direction: row; /*Wird horizontal ausgerichtet*/
+    justify-content: flex-end; /*Items werden rechts ausgerichtet*/
+    align-items: center; /*Zentrierung*/
+    list-style: none; /*Die Liste soll keine Punkte als Aufzählung mehr haben*/
+}
+
+nav li {
+    height: 100% ; /*Die List-Items sollen eine vollständige Höhe in der Navigation haben (80px - height - nav)*/
+    width: 150px; /*Die List-Items sollen eine Breite von 150px haben*/
+    text-align: center; /*Der Text der List-Items soll zentriert in List-Item dargestellt werden*/
+    position: relative; /*Es soll bei jeder Bildschrimbreite gleich dargestellt werden*/
+}
+
+nav li:hover {
+    background: #000000; /*Beim drüberfahren mit der Maus, soll der Hintergrund der List-Items schwarz sein*/
+    color: #ffffff; /*Der Text soll beim drüberfahren mit Maus weiss erscheinen*/
+}
+
+nav ul a:hover {
+    color: #ffffff; /*Beim drüberfahren sollen die Links der ungeordneten Liste in der Navigation weiss erscheinen*/
+    font-weight: 900; /*Beim drüberfahren mit der Maus soll der Text fett erscheinen*/
+}
+
+nav ul a{
+    height: 100%; /*Der Link soll 100% hoch (nav ul li) sein*/
+    width: 100%; /*Der Link soll 100% breit (nav ul li) sein*/
+    display: flex; /*Definiert als Flex-Container für korrekte positionierung*/
+    align-items: center; /*Zentriert*/
+    justify-content: center; 
+    text-decoration: none; /*Keine Dekoration, das heisst nicht unterstrichen usw.*/
+    color: #000000; /*Text soll schwarz sein*/
+    text-transform: uppercase; /*Text soll grossgeschrieben sein*/
+    font-weight: 700; /*Text soll eine font-weight von 700 haben, also fett dargestellt werden*/
+}
+
+.dropdown {
+    height: min-content; /*Grösse wird an das Dropdown angepasst*/
+    width: 150px; /*Dropdown Menü soll 150px breit sein*/
+    background: #ffffff; /*Soll weissen Hintergrund haben*/
+    display: none; /*Soll standardmässig ausgeblendet sein*/
+    flex-direction: column; /*Wird von oben nach unten angeordnet*/
+    left: 0; /*Linksbündige Positionierung*/
+    top: 80px; /*Abstand zu oben ist 80px*/
+    position: absolute; /*Wird fest verankert an der Position*/
+}
+
+.dropdown li {
+    height: 70px; /*List-Item ist 70px hoch*/
+    width: 100%; /*Ist zu 100% breit (an min-content)*/
+}
+
+.dropdown li a {
+    justify-content: flex-start; /*Linksbündig*/
+    padding-left: 20px; /*Abstand zu links beträgt 20px*/
+    width: calc(100% - 20px); /*Maus soll nicht über den Rand hinaus hovern*/
+}
+
+nav li:hover .dropdown {
+    display: flex; /*Wird als Flex-Container definiert*/
+}
+
+nav input[type="checkbox"]{
+    display: none; /*Checkbox soll nicht angezeigt werden*/
+}
+
+.expandable_li {
+    display: flex; /*Wird als flex-box definiert*/
+    justify-content: center; /*Horizontal in der Mitte ausrichten*/
+    align-items: center; /*Zentrierung*/
+}
+
+/*Bis hier von YouTube-Video */
+
+.h1top {
+    text-align: center; /*Zentrierung*/
+    padding-top: 140px; /*Abstand zu oben 140px*/
+    color: #ffffff; /*Weisse Textfarbe*/
+}
+
+.h1top2 {
+    text-align: center; /*Zentriert*/
+    padding-top: 50px; /*Abstand zu oben 50px*/
+    color: #ffffff; /*Weisse Textfarbe*/
+}
+
+.h2top{
+    text-align: center; /*Zentriert*/
+    padding-top: 10px; /*Zu oben 10px Abstand*/
+    color: #ffffff; /*Textfarbe weiss*/
+    padding-bottom: 70px; /*Abstand zu unten soll 70px betragen*/
+}
+
+.h2top2{
+    text-align: center; /*Zentriert*/
+    padding-top: 10px; /*Abstand zu oben 10px*/
+    color: #ffffff; /*weisse Textfarbe*/
+    
+}
+
+
+/*Breite für Bild 1588px * 326px festlegen*/
+.topblack {
+    background-image: url(../IMG/top.jpg); /*Hintergrundbild, mit vollständiger BReite des Bildschirms*/
+    width: 100%;
+}
+
+.topblack2 {
+    background-image: url(../IMG/top2.jpg);/*Hintergrundbild, mit vollständiger BReite des Bildschirms*/
+    width: 100%;
+}
+
+.topblack3 {
+    background-image: url(../IMG/top3.jpg);/*Hintergrundbild, mit vollständiger BReite des Bildschirms*/
+    width: 100%;
+}
+
+.topblack4 {
+    background-image: url(../IMG/top4.jpg);/*Hintergrundbild, mit vollständiger BReite des Bildschirms*/
+    width: 100%;
+}
+
+label {
+    text-transform: uppercase; /*Text grossgeschrieben*/
+    font-weight: 700; /*Text fett darstellen*/
+}
+
+.btn {
+    background: none; /*Button soll keinen Hintergrund haben - > transparent*/
+    border: 2px solid #fff; /*Soll eine Aussenlinie habe, 2px dicke, durcgezogene, weisse Aussenlinie*/
+    text-transform: uppercase; /*Grossgeschrieben*/
+    padding: 12px 20px; /*Oben unten 12px Abstand zur Aussenlinie, links rechts 20px*/
+    min-width: 200px; /*Minimalbreite von 200px*/
+    margin: 10px; /*Aussenabstand von 10px*/
+    margin-top: 30px; /*Aussenabstand oben 30px*/
+    margin-bottom: 40px; /*Aussenabstand unten 40px*/
+    cursor: pointer; /*Maus soll auf einen Link verweisen*/
+    font-weight: 900; /*Fetter Text*/
+    position: relative; /*Genaue Positionierung einhalten*/
+    color: #fff; /*Weisser Text*/
+    font-size: 16px; /*Schriftgrösse 16px*/
+    text-align: center; /*Zentriert*/
+  }
+
+  .btn:hover {
+    color: #1e3a8a; /*Textfarben soll beim drüberfahren mit ddr Maus blau sein*/
+    border: 2px solid #000; /*Schwarze aussenlinie die durchgezogen ist und 2px briet ist soll erscheinen, wenn mit der Maus drübergefahren wird*/
+    background-color: #fff; /*Hintergrund soll weiss sein*/
+  }
+
+  .btnkontakt1 {
+    background: none;/*Button soll keinen Hintergrund haben - > transparent*/
+    border: 2px solid #fff;/*Soll eine Aussenlinie habe, 2px dicke, durcgezogene, weisse Aussenlinie*/
+    text-transform: uppercase;/*Grossgeschrieben*/
+    padding: 12px 20px;/*Oben unten 12px Abstand zur Aussenlinie, links rechts 20px*/
+    min-width: 200px;/*Minimalbreite von 200px*/
+    margin: 10px;/*Aussenabstand von 10px*/
+    margin-top: 30px; /*Aussenabstand oben 30px*/
+    margin-bottom: 20px;/*Aussenabstand unten 40px*/
+    cursor: pointer;/*Maus soll auf einen Link verweisen*/
+    font-weight: 900;/*Fetter Text*/
+    position: relative;/*Genaue Positionierung einhalten*/
+    color: #fff;/*Weisser Text*/
+    font-size: 16px;/*Schriftgrösse 16px*/
+  }
+
+  .btnkontakt1:hover {
+    color: #1e3a8a;/*Textfarben soll beim drüberfahren mit der Maus blau sein*/
+    border: 2px solid #000;/*Schwarze aussenlinie die durchgezogen ist und 2px briet ist soll erscheinen, wenn mit der Maus drübergefahren wird*/
+    background-color: #fff;/*Hintergrund soll weiss sein*/
+  }
+
+  .btnkontakt2 {
+    background: none;/*Button soll keinen Hintergrund haben - > transparent*/
+    border: 2px solid #fff;/*Soll eine Aussenlinie habe, 2px dicke, durcgezogene, weisse Aussenlinie*/
+    text-transform: uppercase;/*Grossgeschrieben*/
+    padding: 12px 20px;/*Oben unten 12px Abstand zur Aussenlinie, links rechts 20px*/
+    min-width: 200px;/*Minimalbreite von 200px*/
+    margin: 10px;/*Aussenabstand von 10px*/
+    margin-top: 0px;/*Aussenabstand oben 30px*/
+    margin-bottom: 20px;/*Aussenabstand unten 40px*/
+    cursor: pointer;/*Maus soll auf einen Link verweisen*/
+    font-weight: 900;/*Fetter Text*/
+    position: relative;/*Genaue Positionierung einhalten*/
+    color: #fff;/*Weisser Text*/
+    font-size: 16px;/*Schriftgrösse 16px*/
+  }
+
+  .btnkontakt2:hover {
+    color: #1e3a8a;/*Textfarben soll beim drüberfahren mit der Maus blau sein*/
+    border: 2px solid #000;/*Schwarze aussenlinie die durchgezogen ist und 2px briet ist soll erscheinen, wenn mit der Maus drübergefahren wird*/
+    background-color: #fff;/*Hintergrund soll weiss sein*/
+  }
+
+  .btnkontakt3 {
+    background: none;/*Button soll keinen Hintergrund haben - > transparent*/
+    border: 2px solid #fff;/*Soll eine Aussenlinie habe, 2px dicke, durcgezogene, weisse Aussenlinie*/
+    text-transform: uppercase;/*Grossgeschrieben*/
+    padding: 12px 20px;/*Oben unten 12px Abstand zur Aussenlinie, links rechts 20px*/
+    min-width: 200px;/*Minimalbreite von 200px*/
+    margin: 10px;/*Aussenabstand von 10px*/
+    margin-top: 0px;/*Aussenabstand oben 30px*/
+    margin-bottom: 50px;/*Aussenabstand unten 40px*/
+    cursor: pointer;/*Maus soll auf einen Link verweisen*/
+    font-weight: 900;/*Fetter Text*/
+    position: relative;/*Genaue Positionierung einhalten*/
+    color: #fff;/*Weisser Text*/
+    font-size: 16px;/*Schriftgrösse 16px*/
+  }
+
+  .btnkontakt3:hover {
+    color: #1e3a8a;/*Textfarben soll beim drüberfahren mit der Maus blau sein*/
+    border: 2px solid #000;/*Schwarze aussenlinie die durchgezogen ist und 2px briet ist soll erscheinen, wenn mit der Maus drübergefahren wird*/
+    background-color: #fff;/*Hintergrund soll weiss sein*/
+  }
+
+  .black-bottom {
+    display: flex; /*Definierung einer FLexbox für die Korrekte Positionierung des Divs*/
+    justify-content: space-between; /*Gleichmässig anordnen*/
+    background: #000000; /*Schwarzer Hintergrund*/
+    color: #ffffff; /*Weisse Schriftfarbe*/
+}
+
+.black-bottom ul li{
+    list-style-type: none; /*Es werden so kiene Punkte angezeigt, von einer ungeordneten Liste*/
+    color: #ffffff; /*Schriftfarbe weiss*/
+}
+
+.black-bottom ul li:hover{
+    list-style-type: none; /*Keine Listenpunkte anzeigen*/
+    color: #808080; /*Schriftfarbe grau*/
+}
+
+.black-bottom ul a {
+    text-decoration: none; /*Kein unterstrichenen Text*/
+}
+
+.black-bottom ul h4 {
+    padding-bottom: 20px; /*Abstand zu unten beträgt 20px*/
+}
+
+.ul1 {
+    padding-top: 50px; /*Abstand zu oben 50px*/
+    padding-left: 80px; /*Abstand zu Links 80px*/
+    padding-bottom: 50px; /*Abstand zu unten 50px*/
+}
+
+.ul2 {
+    padding-top: 50px;/*Abstand zu oben 50px*/
+    padding-bottom: 50px;/*Abstand zu unten 50px*/
+}
+
+
+.ul3 {
+    padding-top: 50px; /*Abstand zu oben 50px*/
+    padding-right: 80px;/*Abstand zu rechts 80px*/
+    padding-bottom: 50px;/*Abstand zu unten 50px*/
+}
+
+.Logo-schwarz {
+    width: 10%; /*Logo soll 10% der ganzen Webseite einnehmen*/
+}
+
+.mailto a:hover {
+    color: #808080; /*Graue Schriftfarbe*/
+}
+
+.title_impr {
+    padding-left: 80px; /*Abstand zu Links 80px*/
+}
+
+.title_impr2 {
+   padding-top: 20px; /*Abstand zu oben 50px*/
+    padding-left: 80px;/*Abstand zu links 80px*/
+    text-align: justify; /*Blocksatz*/
+    text-align-last: left; /*Letzter Abschnitt soll links sein*/
+}
+
+.Mail_impr {
+    text-decoration: none; /*Nicht unterstrichen*/
+
+}
+
+.Mail_impr:hover {
+    color: red; /*rote Schriftfarbe*/
+    text-decoration: underline; /*Unterstrichen beim drüberfahren mit der Maus*/
+}
+
+main {
+    display: grid; /*Wird in ein Rastersystem erstellt, für Bildergalerie*/
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /*Definiert wie gross die Bilder sein sollen und übernimmt das für alle Bilder mit der repeat Funktion*/
+    grid-gap: 1rem; /*Definiert den Abstand zwischen den Bildern*/
+    padding-top: 50px; /*Abstand zu oben 50px*/
+    padding-left: 80px; /*Abstand zu Links 80px*/
+    padding-right: 80px; /*Abstand zu rechts 80px*/
+    padding-bottom: 50px; /*Abstand zu unten 50px*/
+}
+
+main .card img {
+    width: 100%;/*Bild soll vollständig breit sein*/
+    height: 336px;/*Bild soll 336px hoch sein*/
+}
+
+.alles {
+    padding-top: 80px;/*Abstand zu oben 80px*/
+}
+
+.uebermichportät {
+    width: 100%;/*Breite 100%*/
+}
+
+.btn2 {
+    background: none;/*Button soll keinen Hintergrund haben*/
+    border: 2px solid #000;/*Abgrezung soll 2px breit, durchgezogen und schwarz sein*/
+    text-transform: uppercase;/*Grossbuchstaben*/
+    padding: 12px 20px;/*Abstand oben/unten 12px, links/rechts 20px*/
+    min-width: 200px;/*Minimalbreite 200px*/
+    margin: 10px;/*10px Abstand zu allen Seiten*/
+    margin-top: 30px;/*Abstand zu oben 30px*/
+    margin-bottom: 40px;/*Abstand zu unten 40px*/
+    cursor: pointer;/*Cursor soll auf einen Link hinweisen*/
+    font-weight: 900;/*Fette Schrift*/
+    position: relative;/*Soll Postion mithilfe von Bildschirm anpassen*/
+    color: #000;/*Schwarze Schrift*/
+    font-size: 16px;/*Schriftgrösse ist 16px*/
+    text-align: center;/*Zentrierter Text*/
+  }
+
+  .btn22 {
+    background: none;/*Button soll keinen Hintergrund haben*/
+    border: 2px solid #000;/*Abgrezung soll 2px breit, durchgezogen und schwarz sein*/
+    text-transform: uppercase;/*Grossbuchstaben*/
+    padding: 12px 20px;/*Abstand oben/unten 12px, links/rechts 20px*/
+    min-width: 200px;/*Minimalbreite 200px*/
+    margin: 10px;/*10px Abstand zu allen Seiten*/
+    margin-top: 30px;/*Abstand zu oben 30px*/
+    cursor: pointer;/*Cursor soll auf einen Link hinweisen*/
+    font-weight: 900;/*Fette Schrift*/
+    position: relative;/*Soll Postion mithilfe von Bildschirm anpassen*/
+    color: #000;/*Schwarze Schrift*/
+    font-size: 16px;/*Schriftgrösse ist 16px*/
+    text-align: center;/*Zentrierter Text*/
+  }
+
+  .btn2intern {
+    background: none;/*Button soll keinen Hintergrund haben*/
+    border: 2px solid #000;/*Abgrezung soll 2px breit, durchgezogen und schwarz sein*/
+    text-transform: uppercase;/*Grossbuchstaben*/
+    padding: 12px 20px;/*Abstand oben/unten 12px, links/rechts 20px*/
+    min-width: 200px;/*Minimalbreite 200px*/
+    margin: 10px;/*10px Abstand zu allen Seiten*/
+    cursor: pointer;/*Cursor soll auf einen Link hinweisen*/
+    font-weight: 900;/*Fette Schrift*/
+    position: relative;/*Soll Postion mithilfe von Bildschirm anpassen*/
+    color: #000;/*Schwarze Schrift*/
+    font-size: 16px;/*Schriftgrösse ist 16px*/
+    text-align: center;/*Zentrierter Text*/
+  }
+
+  .btn2intern:hover {
+    color: #fff;/*Weisse Schrift*/
+    border: 2px solid #fff;/*Weisse Abgreznung, die 2px breit ist und durchgezogen ist.*/
+    background-color: #000;/*Hintergrundfarbe schwarz*/
+  }
+ 
+
+  .btn2:hover {
+    color: #fff;/*Weisse Schrift*/
+    border: 2px solid #fff;/*Weisse Abgreznung, die 2px breit ist und durchgezogen ist.*/
+    background-color: #000;/*Hintergrundfarbe schwarz*/
+  }
+  
+
+  .btn22:hover {
+    color: #fff;/*Weisse Schrift*/
+    border: 2px solid #fff;/*Weisse Abgreznung, die 2px breit ist und durchgezogen ist.*/
+    background-color: #000;/*Hintergrundfarbe schwarz*/
+  }
+
+  textarea {
+    padding: 8px;/*Abstand zu allen Seiten beträgt 8px*/
+    border: 3px solid #ccc;/*Die Abgrenzung ist 3px breit, durchgezogen und grau*/
+    border-radius: 5px;/*Abgrenzung wird abgerundet, der Radius beträgt 5px*/
+    outline: none;/*Keine Aussenlinie*/
+    font-size: larger;/*Grosse Schriftgrösse*/
+  }
+
+  textarea:focus {
+    border: 3px solid #00ff3c67;/*Sobald das Textfeld ausgewählt ist, wird die Abgrenzung 3px breit, durchgezogen und grün*/
+    color: #fff;/*Schrift wird weiss, wenn angewählt*/
+    background: #000000;/*Hintergrund wird schwarz, wenn angewählt*/
+    font-size: larger;/*Grosse Schrift*/
+  }
+
+  textarea:hover {
+    border: 3px solid #00ff3c67;/*Sobald man mit der Maus über das Textfeld drüberfährt, wird die Abgrenzung grün, durchgezogen und 3px breit*/
+    color: #fff;/*Wenn drübergefahren wird mit der Maus, dann wird die Schrift weiss*/
+    background: #000000;/*Wenn drübergefahren wird mit der Maus, wird der Hintergrund schwarz*/
+    font-size: larger;/*Grosse Schrift*/
+  }
+
+  input {
+    padding: 8px;/*Abstand zu allen Seiten beträgt 8px*/
+    border: 3px solid #cccccc;/*Abgrenzung 3px breit, durchgezogen, grau*/
+    border-radius: 5px;/*Die Abgenzung wird abgerundet mit einem Radius von 5px*/
+    outline: none;/*Keine Aussenlinie*/
+  }
+
+  input:focus {
+    border: 3px solid #00ff3c67;/*Sobald das input-Elemnt angewählt wird , wird die Abgrenzung grün*/
+  }
+
+  select {
+    padding: 8px;/*Abstand zu allen Seiten beträgt 8px*/
+    border: 3px solid #ccc;/*Abgrenzung 3px breit, durchgezogen, grau*/
+    outline: none;/*Keine Aussenlinie*/
+    cursor: pointer;/*Maus soll auf einen Link hinweisen*/
+    font-size: large;/*Grosse Schrift*/
+  }
+
+  select:focus {
+    border: 3px solid #00ff3c67;/*Sobald angewählt Abgrenzung 3px breit, durchgezogen, grün*/
+    background: #000;/*Schwarzer Hintergrund*/
+    color: #fff;/*Weisse Schrift*/
+    font-size: large;/*Grosse Schrift*/
+  }
+
+  select:hover {
+    border: 3px solid #00ff3c67;/*Sobald mit der Maus drübergrfahren Abgrenzung 3px breit, durchgezogen, grün*/
+    background: #000;/*Schwarzer Hintergrund*/
+    color: #fff;/*Weisse Schrift*/
+    font-size: large;/*Grosse Schrift*/
+  }
+
+  input[type="reset"] {
+    cursor: pointer;/*Cursor soll auf einen Link hinweisen*/
+    font-size: 15px;/*Schriftgrösse 15px*/
+    font-weight: 900;/*Fette Schrift*/
+    text-transform: uppercase;/*Grossbuchstaben*/
+  }
+
+  input[type="submit"] {
+    cursor: pointer;/*Cursor soll auf einen Link hinweisen*/
+    font-size: 15px;/*Schriftgrösse 15px*/
+    font-weight: 900;/*Fette Schrift*/
+    text-transform: uppercase;/*Grossbuchstaben*/
+  }
+
+  input[type="reset"]:hover {
+    cursor: pointer;/*Cursor soll auf einen Link verweisen*/
+    color: #fff;/*Weisse Schrift*/
+    background: #000;/*Schwarzer Hintergrund*/
+    border: 3px solid #00ff3c67;/*Abgrenzung soll 3px breit, durchgezogen und grün sein*/
+  }
+
+  input[type="submit"]:hover {
+    cursor: pointer;/*Cursor soll auf einen Link verweisen*/
+    color: #fff;/*Weisse Schrift*/
+    background: #000;/*Schwarzer Hintergrund*/
+    border: 3px solid #00ff3c67;/*Abgrenzung soll 3px breit, durchgezogen und grün sein*/
+  }
+
+  input[type="text"] {
+    font-size: large;/*Grosse Schrift*/
+  }
+
+  input[type="text"]:hover { /*Beim drüberfahren mit der Maus:*/
+    font-size: large;/*Grosse Schrift*/
+    color: #fff;/*Weisse Schrift*/
+    background: #000;/*Schwarzer Hintergrund*/
+    border: 3px solid #00ff3c67;/*Abgrenzung soll 3px breit. durchgezogen und grün sein*/
+  }
+
+  input[type="text"]:focus { /*Sobald angewählt*/
+    font-size: large;/*Grosse Schrift*/
+    color: #fff;/*Weisse Schrift*/
+    background: #000;/*Schwarzer Hintergrund*/
+    border: 3px solid #00ff3c67;/*Abgrenzung soll 3px breit. durchgezogen und grün sein*/
+  }
+
+  input[type="radio"] {
+    cursor: pointer;/*Cursor soll hinweisen, dass man die Radio-Buttons auswählen kann*/
+  }
+
+
+
+  input[type="button"] {
+    font-size: 15px;/*Schriftgrösse 15px*/
+    cursor: pointer;/*Cursor soll daruf hinweisen, dass der Button drückbar ist*/
+    font-weight: 900;/*Fetter Text*/
+    text-transform: uppercase;/*Grossbuchstaben*/
+  }
+
+  input[type="button"]:hover {
+    cursor: pointer;/*Cursor soll beim drückerfahren mit der Maus hinweisen, dass der Button drückbar ist*/
+    color: #fff;/*Weisse Schrift*/
+    background: #000;/*Schwarzer Hintergrund*/
+    border: 3px solid #00ff3c67;/*Abgrenzung soll 3px breit, durchgezogen und grün sein*/
+  }
+
+  input[type="email"]{
+    font-size: large;/*Grosse Schrift*/
+    
+  }
+
+  input[type="email"]:hover {
+    font-size: large;/*Grosse Schrift*/
+    color: #fff;/*Weisse Schrift*/
+    background: #000;/*Schwarzer Hintergrund*/
+    border: 3px solid #00ff3c67;/*Abgrenzung soll 3px breit, durchgezogen und grün sein*/
+  }
+
+  input[type="email"]:focus {
+    font-size: large;/*Grosse Schrift*/
+    color: #fff;/*Weisse Schrift*/
+    background: #000;/*Schwarzer Hintergrund*/
+    border: 3px solid #00ff3c67;/*Abgrenzung soll 3px breit, durchgezogen und grün sein*/
+  }
+
+  input[type="tel"]{
+    font-size: large;/*Grosse Schrift*/
+    
+  }
+
+  input[type="tel"]:hover {
+    font-size: large;/*Grosse Schrift*/
+    color: #fff;/*Weisse Schrift*/
+    background: #000;/*Schwarzer Hintergrund*/
+    border: 3px solid #00ff3c67;/*Abgrenzung soll 3px breit, durchgezogen und grün sein*/
+  }
+
+  input[type="tel"]:focus {
+    font-size: large;/*Grosse Schrift*/
+    color: #fff;/*Weisse Schrift*/
+    background: #000;/*Schwarzer Hintergrund*/
+    border: 3px solid #00ff3c67;/*Abgrenzung soll 3px breit, durchgezogen und grün sein*/
+  }
+
+  input[type="date"]{
+    cursor: pointer;/*Cursor soll auf Link hinweisen*/
+    font-size: large;/*Grosse Schrift*/
+  }
+
+  input[type="date"]:hover {
+    font-size: large;/*Grosse Schrift*/
+    color: #fff;/*Weisse Schrift*/
+    background: #000;/*Schwarzer Hintergrund*/
+    border: 3px solid #00ff3c67;/*Abgrenzung soll 3px breit, durchgezogen und grün sein*/
+  }
+
+  input[type="date"]:focus {
+    font-size: large;/*Grosse Schrift*/
+    color: #fff;/*Weisse Schrift*/
+    background: #000;/*Schwarzer Hintergrund*/
+    border: 3px solid #00ff3c67;/*Abgrenzung soll 3px breit, durchgezogen und grün sein*/
+  }
+
+  .foto_preview_gallery img{
+    width: 58%;/*Foto soll 58% breit sein*/
+  }
+
+  .foto_preview_gallery {
+    text-align: center;/*Items sollen zentriert werden*/
+  }
+
+  .buttons_foto_preview {
+    text-align: center;/*Items sollen zentriert werden*/
+  }
+
