@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Rinor Hagmann</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="icon" type="image/png" href="IMG/Logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Von YouTube und W3C-->
+<header>    
+    <nav>
+        <a href="index.html"><img class="logo" src="../IMG/Logo_transparent.png"></img></a>
+        <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li class="expandable_li">
+                <input type="checkbox" id="kontakt_checkbox">
+                <label for="kontakt_checkbox">Kontakt</label>
+                <ul class="dropdown">
+                    <li><a href="kontaktangaben.html">Angaben</a></li>
+                    <li><a href="impressum.html">Impressum</a></li>
+                </ul>
+            </li>
+            <li class="expandable_li">
+                <input type="checkbox" id="kontakt_checkbox">
+                <label for="kontakt_checkbox">Mehr</label>
+                <ul class="dropdown">
+                    <li><a href="../Galerie/galerie.html">Bilder</a></li>
+                    <li><a href="../Über mich/ueber-mich.html">Über mich</a></li>
+                    <li><a href="../PDF/Lebenslauf.pdf">Lebenslauf</a></li>
+                    <li><a href="../Intern/intern.html">Intern</a></li>
+                    <li><a href="../Extern/extern.html">Extern</a></li>
+                </ul>
+            </li>    
+        </ul>
+    </nav>
+
+    <!-- Bis hier von YouTube und W3C -->
+</header>
+<div class="form" style="padding-top: 100px; padding-left: 80px; padding-right: 80px;">
+    <h1 id="h1">Kontaktformular</h1>
+    <p>Bitte geben Sie hier Ihre Kontaktangaben inkl. Anliegen an, damit wir Sie so schnell wie möglich kontaktieren können! <br>Überprüfen Sie gegebenenfalls nochmals die Angaben vor dem Abschicken!</p>
+    <form action="formular.php" method="get">    
+        <fieldset style="width: 500px; border: none;">
+            <legend style="padding-top: 40px; font-size: x-large;"><b>ADRESSE</b></legend>
+            <p>Anrede *</p>
+            <input type="radio" name="gender" name="male">
+                <label for="male">Männlich</label>
+            <input type="radio" name="gender" name="female">
+                <label for="female">Weiblich</label>
+            <input type="radio" name="gender" name="other">
+                <label for="other">Anderes</label><br><br>
+            <p>Vorname *</p>
+            <input type="text" name="first name" required placeholder="Ihr Vorname (Pflichtfeld*)">
+            <p style="padding-top: 15px;">Nachname *</p>
+            <input type="text" name="last name" required placeholder="Ihr Nachname (Pflichtfeld*)">
+            <p style="padding-top: 15px;">Alter *</p>
+            <input type="date" name="birthday" required placeholder="Ihr Geburtsdatum (Pflichtfeld*)">
+            <p style="padding-top: 15px;">Strasse</p>
+            <input type="text" name="adress/road" placeholder="Adresse inkl. Hausnummer">
+            <p style="padding-top: 15px;">PLZ & Ort</p>
+            <input type="text" name="adress/plz" placeholder="4000"><br><br><input type="text" name="adress/city" required placeholder="Ihre Stadt, Ihr Dorf">
+            <p style="padding-top: 15px;">Land *</p>
+            <select name="country" required> 
+                
+                <option value="none" selected="selected">Bitte wählen Sie Ihr Land aus...</option>
+                <option value="CH">Schweiz - CH</option> 
+                <option value="AT">Österreich - A</option> 
+                <option value="DE">Deutschland - D</option>
+            </select>
+        </fieldset>
+        <fieldset style="width: 500px; border: none;">
+            <legend style="padding-top: 40px; font-size: x-large;"><B>IHRE KONTAKTANGABEN</B></legend>
+            <p>Telefon *</p>
+            <input type="tel" name="telephone" required placeholder="0790000000 (Pflichtfeld*)">
+            <p style="padding-top: 15px;">E-Mail *</p>
+            <input type="email" name="email" required placeholder="example@example.org (Pflichtfeld*)">
+            <p style="padding-top: 15px;">URL</p>
+            <input type="text" name="URL" placeholder="https://www.example.org">
+        </fieldset>
+        <fieldset style="width: 500px; border: none;">
+            <legend style="padding-top: 40px; font-size: x-large; padding-bottom: 10px;"><b>IHR ANLIEGEN</b></legend>
+                <textarea name="bemerkungen" cols="30" rows="10" placeholder="Bitte nennen Sie hier Ihr Anliegen..." required></textarea>
+        </fieldset>
+        <fieldset style="width: 500px; border: none;">
+            <input type="reset" value="Löschen"/>
+            <a href="#h1"><input type="button" value="Angaben nochmals überprüfen"></a>
+            <input type="submit" value="Senden"/>
+        </fieldset>
+    </form>
+</div>    
+<div class="alles" style="text-align: center";>    
+<div class="black-bottom" >
+    <ul class="ul1" style="text-align: left;">
+        <h4>KONTAKT</h4>
+        <a href="Kontakt/kontaktangaben.html"><li>Meine Angaben</li></a>
+        <a href="Kontakt/impressum.html"><li>Impressum</li></a>
+    </ul>
+    <ul class="ul2" style="text-align: left;">
+        <h4>ÜBER MICH</h4>
+            <a href="Über mich/ueber-mich.html"><li>Über mich</li></a>
+            <a href="PDF/Lebenslauf.pdf"><li>Mein Lebenslauf</li></a>
+    </ul>
+    <ul class="ul3" style="text-align: left;">
+        <h4>MEHR</h4>
+        <a href="Galerie/galerie.html"><li>Bildergalerie</li></a>
+        <a href="Extern/extern.html"><li>Externe Links</li></a>
+        <a href="Intern/intern.html"><li>Interne Links</li></a>
+    </ul>
+    </div>
+    <div class="footerlogo" style="background: #000;">
+        
+            <img src="../IMG/Logo-schwarz.png" class="Logo-schwarz"><br>
+            <footer><p class="footer" style="font-size: 10px; color: white; padding-bottom: 10px;">Rinor Hagmann | <a href="mailto:rinor.hagmann@stud.edubs.ch" style="text-decoration: none; color: white;" class="mailto">rinor.hagmann@stud.edubs.ch</a> | Schweiz - CH<br>© 2023 - Rinor Hagmann</p></footer>
+        
+    </div>
+    </div>    
+    </body>
+    </html>
